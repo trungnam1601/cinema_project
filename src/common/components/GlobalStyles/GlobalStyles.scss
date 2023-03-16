@@ -6,6 +6,7 @@
     --white: #fff;
     --text-color: #161823;
     --font-family: 'ProximaNova', sans-serif;
+    --primary-color: #2c5a9d;
 }
 
 html {
@@ -33,9 +34,18 @@ input,
     outline: none;
 }
 
+ul,
+li {
+    list-style: none;
+    margin-bottom: 0;
+}
+
 a {
     color: var(--text-color);
     text-decoration: none;
+    &:hover {
+        color: none;
+    }
 }
 
 //fonts embeded in the

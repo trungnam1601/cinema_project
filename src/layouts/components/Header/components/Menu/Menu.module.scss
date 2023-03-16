@@ -1,0 +1,116 @@
+.primary-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+.movie {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-right: 16px;
+
+    padding-right: 20px;
+    .icon-down {
+        position: absolute;
+        font-weight: 100;
+        font-size: 1.4rem;
+        color: rgba(85, 105, 135, 0.5);
+        right: 2px;
+        cursor: pointer;
+    }
+
+    &::before {
+        position: absolute;
+        height: 5px;
+        width: 0%;
+        bottom: -36px;
+        background: #2c5a9d;
+        content: '';
+        display: block;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 5px;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        z-index: 1;
+    }
+
+    &::after {
+        position: absolute;
+        height: 5px;
+        width: 0%;
+        bottom: -36px;
+        background: #2c5a9d;
+        content: '';
+        right: 0%;
+        display: block;
+        border-top-left-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 0;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        z-index: 1;
+    }
+
+    &.active {
+        &::before {
+            right: 50%;
+            width: 50%;
+        }
+
+        &::after {
+            left: 50%;
+            width: 50%;
+        }
+    }
+
+    &:hover {
+        color: #2c5a9d;
+        cursor: pointer;
+        &::before {
+            right: 50%;
+            width: 50%;
+        }
+
+        &::after {
+            left: 50%;
+            width: 50%;
+        }
+    }
+}
+
+// img {
+//     width: 140px;
+// }
+
+.menu-sub-wrapper {
+    position: relative;
+    bottom: -35px;
+    right: -32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: var(--white);
+    box-shadow: 8px 8px 30px 0px rgb(42 67 113 / 15%);
+    width: 180px;
+    height: 90px;
+    // margin-left: -5px;
+}

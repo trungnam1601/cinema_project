@@ -1,0 +1,46 @@
+.wrapper {
+    height: 30px;
+    background-color: black;
+}
+
+.container {
+    height: 100%;
+}
+.account {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 0;
+    height: 100%;
+}
+
+.account_item {
+    height: 100%;
+    position: relative;
+    line-height: 30px;
+    padding: 0 20px;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--white);
+        opacity: 0.8;
+    }
+}
+
+.account_sperator {
+    position: relative;
+    top: 7px;
+    border-right: 1px solid hsla(0, 0%, 100%, 0.4);
+    height: 1.6rem;
+}
+
+.account_item-link {
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--white);
+
+    &:hover {
+        color: var(--white);
+    }
+}

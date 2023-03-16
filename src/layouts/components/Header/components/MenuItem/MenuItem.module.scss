@@ -1,0 +1,70 @@
+.menu-item {
+    position: relative;
+    margin: 0 20px;
+
+    &::before {
+        position: absolute;
+        height: 5px;
+        width: 0%;
+        bottom: -36px;
+        background: #2c5a9d;
+        content: '';
+        display: block;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 5px;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        z-index: 1;
+    }
+
+    &::after {
+        position: absolute;
+        height: 5px;
+        width: 0%;
+        bottom: -36px;
+        background: #2c5a9d;
+        content: '';
+        right: 0%;
+        display: block;
+        border-top-left-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 0;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        z-index: 1;
+    }
+
+    &.active {
+        &::before {
+            right: 50%;
+            width: 50%;
+        }
+
+        &::after {
+            left: 50%;
+            width: 50%;
+        }
+    }
+
+    &:hover {
+        color: #2c5a9d;
+        &::before {
+            right: 50%;
+            width: 50%;
+        }
+
+        &::after {
+            left: 50%;
+            width: 50%;
+        }
+    }
+}
